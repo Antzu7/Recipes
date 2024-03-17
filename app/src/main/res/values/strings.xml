@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Recipes</string>
+    <string name="Recipes">Рецепты</string>
+    <string name="Language">RU</string>
+    <string name="Breakfast">Завтрак</string>
+    <string name="Lunch">Обед</string>
+    <string name="Dinner">Ужин</string>
+    <string name="Russian">Русский</string>
+    <string name="English">English</string>
+    <string name="Chinese">中文</string>
+    <string name="language_select">Выберите язык</string>
+    <string name="back_btn">Назад</string>
+    <string name="Recipe_1">Рецепт1</string>
+    <string name="Recipe_2">Рецепт2</string>
+    <string name="Recipe_3">Рецепт3</string>
+</resources>

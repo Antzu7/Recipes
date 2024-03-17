@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Recipes</string>
+    <string name="Recipes">Recipes</string>
+    <string name="Language">EN</string>
+    <string name="Breakfast">Breakfast</string>
+    <string name="Lunch">Lunch</string>
+    <string name="Dinner">Dinner</string>
+    <string name="Russian">Русский</string>
+    <string name="English">English</string>
+    <string name="Chinese">中文</string>
+    <string name="language_select">Select a language</string>
+    <string name="back_btn">Back</string>
+</resources>

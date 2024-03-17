@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Recipes</string>
+    <string name="Recipes">食谱</string>
+    <string name="Language">ZH</string>
+    <string name="Breakfast">早餐</string>
+    <string name="Lunch">午餐</string>
+    <string name="Dinner">晚餐</string>
+    <string name="Russian">Русский</string>
+    <string name="English">English</string>
+    <string name="Chinese">中文</string>
+    <string name="language_select">"选择一种语言 "</string>
+    <string name="back_btn">返回</string>
+</resources>
