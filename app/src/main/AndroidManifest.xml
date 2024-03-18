@@ -24,6 +24,24 @@
         <activity
             android:name=".LanguageActivity"
             android:exported="false" />
+        <activity
+            android:name=".BreakfastActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LunchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DinnerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FirstActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SecondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ThirdActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

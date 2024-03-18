@@ -21,29 +21,29 @@ public class MainActivity extends AppCompatActivity {
         dinner_btn = findViewById(R.id.dinner_btn);
         language_main = findViewById(R.id.language_main);
 
-//        breakfast_btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this, BreakfastActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//
-//        lunch_btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this, LunchActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//
-//        dinner_btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this, DinnerActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        breakfast_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, BreakfastActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        lunch_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, LunchActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        dinner_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, DinnerActivity.class);
+                startActivity(intent);
+            }
+        });
 
         language_main.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,5 +52,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, REQUEST_CODE);
             }
         });
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK) {
+            recreate();
+            Intent intent = new Intent(MainActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
     }
 }
