@@ -1,10 +1,14 @@
 package com.example.recipes;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -20,6 +24,9 @@ public class FirstActivity extends AppCompatActivity {
     TextView timer_value_1;
     private CountDownTimer timer1;
 
+    private Vibrator vibrator;
+    MediaPlayer media;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +36,9 @@ public class FirstActivity extends AppCompatActivity {
         back_to_breakfast = findViewById(R.id.back_to_breakfast);
         timer_btn_1 = findViewById(R.id.timer_btn_1);
         timer_value_1 = findViewById(R.id.timer_value_1);
+
+        vibrator=(Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
+        media=MediaPlayer.create(this, R.raw.timer_finish);
 
         timer_btn_1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,7 +53,7 @@ public class FirstActivity extends AppCompatActivity {
                 else {
                     timer_btn_1.setText(getString(R.string.stop_btn));
                     timer_btn_1.setBackgroundColor(Color.RED);
-                    timer1=new CountDownTimer(3000,1000) {
+                    timer1=new CountDownTimer(300000,1000) {
                         @Override
                         public void onTick(long l) {
                             NumberFormat f = new DecimalFormat("00");
@@ -56,6 +66,8 @@ public class FirstActivity extends AppCompatActivity {
 
                         @Override
                         public void onFinish() {
+                            media.start();
+                            vibrator.vibrate(VibrationEffect.createOneShot(5000, 250));
                             timer1.cancel();
                             timer_btn_1.setText(getString(R.string.timer_btn_text_1));
                             timer_btn_1.setBackgroundColor(Color.parseColor("#6750a4"));
